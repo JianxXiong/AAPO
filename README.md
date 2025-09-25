@@ -50,7 +50,7 @@ cd open-r1
 bash train.sh
 ```
 
-## Evaluattion
+## Evaluation
 ### Evaluate Qwen series models
 evaluation on single benckmark
 ```bash
