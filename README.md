@@ -43,7 +43,7 @@ bash train.sh
 
 Train Llama series models
 
-Set max_completion_length=3072, max_prompt_length=1024 in train.sh, and set dataset_name to SimpleRL-Zoo-Data/simplelr_abel_level3to5 in config file.
+Set max_completion_length=3072, max_prompt_length=1024 in train.sh, and set dataset_name to SimpleRL-Zoo-Data/simplelr_abel_level3to5 in config file and clear the system prompt.
 
 ```bash
 cd open-r1

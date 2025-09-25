@@ -86,7 +86,7 @@ def main(script_args, training_args, model_args):
 
     # handle dataset
     # Load the dataset
-    if 'simplelr_qwen_level3to5' in script_args.dataset_name:
+    if 'simplelr_qwen_level3to5' in script_args.dataset_name or 'simplelr_abel_level3to5' in script_args.dataset_name:
         dataset = custom_loading_dataset(script_args.dataset_name, max_length=training_args.max_prompt_length, tokenizer=tokenizer)
 
     else:
@@ -112,7 +112,7 @@ def main(script_args, training_args, model_args):
         # prompt.append({"role": "user", "content": example["problem"]})
         return {"prompt": prompt}
 
-    if 'simplelr_qwen_level3to5' in script_args.dataset_name:
+    if 'simplelr_qwen_level3to5' in script_args.dataset_name or 'simplelr_abel_level3to5' in script_args.dataset_name:
         dataset = dataset.map(make_conversation_math35)
     else:
         dataset = dataset.map(make_conversation)
@@ -181,7 +181,7 @@ def main(script_args, training_args, model_args):
     # Save everything else on main process
     kwargs = {
         "dataset_name": script_args.dataset_name,
-        "tags": ["simplelr_qwen_level3to5"],
+        "tags": [script_args.dataset_name],
     }
     if trainer.accelerator.is_main_process:
         trainer.create_model_card(**kwargs)

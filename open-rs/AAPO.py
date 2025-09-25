@@ -248,7 +248,7 @@ def main(script_args, training_args, model_args):
     # Save everything else on main process
     kwargs = {
         "dataset_name": script_args.dataset_name,
-        "tags": ["open-r1"],
+        "tags": [script_args.dataset_name],
     }
     if trainer.accelerator.is_main_process:
         trainer.create_model_card(**kwargs)
@@ -269,9 +269,9 @@ def main(script_args, training_args, model_args):
     #############
     # push to hub
     #############
-    # if training_args.push_to_hub:
-    #     logger.info("Pushing to hub...")
-    #     trainer.push_to_hub(**kwargs)
+    if training_args.push_to_hub:
+        logger.info("Pushing to hub...")
+        trainer.push_to_hub(**kwargs)
 
 
 if __name__ == "__main__":
