@@ -65,7 +65,7 @@ bash auto_eval.sh
 ### Evaluate Llama series models
 You can refer to this repo [SimpleRL-Reason](https://github.com/hkust-nlp/simpleRL-reason).
 
-## 📚 Citation
+## Citation
 If you get any thing useful from this work, please cite:
 ```bibtex
 @misc{xiong2025aapoenhancingreasoningcapabilities,
@@ -79,5 +79,5 @@ If you get any thing useful from this work, please cite:
 }
 ```
 
-## 🙏 Acknowledge
+## Acknowledge
 We are grateful for the foundational code provided by [SimpleRL-Reason](https://github.com/hkust-nlp/simpleRL-reason), [open-rs](https://github.com/knoveleng/open-rs) and [GPG](https://github.com/AMAP-ML/GPG). Utilizing their resources implies agreement to their respective licenses. Our project benefits greatly from these contributions, and we acknowledge their significant impact on our work.
