@@ -1,0 +1,4 @@
+**/output/
+**/SimpleRL-Zoo-Data/
+**/__pycache__/
+**/wandb/
