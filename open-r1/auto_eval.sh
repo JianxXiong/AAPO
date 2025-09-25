@@ -1,7 +1,4 @@
 #!/bin/bash
-export VLLM_PORT=8010
-export CUDA_VISIBLE_DEVICES=1
-
 # your model checkpoints
 CHECKPOINTS=("1" "2" "3")
 
