@@ -1,4 +1,7 @@
-# [AAPO: Enhancing the Reasoning Capabilities of LLMs with Advantage Momentum](https://arxiv.org/abs/2505.14264v2)
+# AAPO: Enhancing the Reasoning Capabilities of LLMs with Advantage Momentum
+
+Paper link: https://arxiv.org/abs/2505.14264v2\
+Authors: Jian Xiong, Jingbo Zhou, Jingyong Ye, Qiang Huang, Dejing Dou
 
 ## Introduction
 In this paper, we propose Advantage-Augmented Policy Optimization (AAPO), a novel RL algorithm
@@ -64,6 +67,9 @@ bash auto_eval.sh
 
 ### Evaluate Llama series models
 You can refer to this repo [SimpleRL-Reason](https://github.com/hkust-nlp/simpleRL-reason).
+
+## Contact
+If you have any questions, please contact jianxiong_ AT outlook DOT com.
 
 ## Citation
 If you get any thing useful from this work, please cite:
