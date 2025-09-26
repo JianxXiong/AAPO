@@ -1,6 +1,6 @@
 # AAPO: Enhancing the Reasoning Capabilities of LLMs with Advantage Momentum
 
-Paper link: https://arxiv.org/abs/2505.14264v2\
+Paper link: https://arxiv.org/abs/2505.14264v2 \
 Authors: Jian Xiong, Jingbo Zhou, Jingyong Ye, Qiang Huang, Dejing Dou
 
 ## Introduction
