@@ -117,7 +117,7 @@ def nanstd(tensor: torch.Tensor) -> torch.Tensor:
     variance *= count / (count - 1)  # Bessel's correction
     return torch.sqrt(variance)
 RewardFunc = Union[str, PreTrainedModel, Callable[[list, list], list[float]]]
-class AAPOrainer(GRPOTrainer):
+class AAPOTrainer(GRPOTrainer):
 
     def __init__(
         self,
@@ -230,7 +230,7 @@ class AAPOrainer(GRPOTrainer):
 
             prompt_ids = prompt_completion_ids[:, :prompt_length]
             completion_ids = prompt_completion_ids[:, prompt_length:]
-            ref_completion_ids = prompt_ref_completion_ids[:, :prompt_length]
+            ref_completion_ids = prompt_ref_completion_ids[:, prompt_length:]
  
 
         # Mask everything after the first EOS token
