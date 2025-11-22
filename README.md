@@ -24,13 +24,6 @@ conda activate train
 pip install -r train_requirements.txt
 ```
 
-## Evaluation environment
-```bash
-conda create -n eval python=3.11
-conda activate eval
-pip install -r eval_requirements.txt
-```
-
 ## Training
 Train DeepSeek-R1-Distill-Qwen-1.5B model
 ```bash
