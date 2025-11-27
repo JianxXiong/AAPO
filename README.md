@@ -21,7 +21,7 @@ Here are the main experimental results in our paper. More results about ablation
 ```bash
 conda create -n train python=3.11
 conda activate train
-pip install -r train_requirements.txt
+pip install -r requirements.txt
 ```
 
 ## Training
