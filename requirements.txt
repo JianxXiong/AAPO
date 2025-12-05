@@ -39,7 +39,7 @@ distro==1.9.0
 einops==0.8.1
 fastapi==0.121.3
 filelock==3.19.1
-flash_attn @ file:///root/paddlejob/workspace/env_run/worksapce/flash_attn-2.7.4.post1%2Bcu12torch2.5cxx11abiFALSE-cp311-cp311-linux_x86_64.whl#sha256=d944fc7d2f962bce83fc4708c2fc0c21eaf8255962a0b350ae919362a51b7ef2
+flash_attn==2.7.4.post1
 frozenlist==1.8.0
 fsspec==2024.12.0
 gguf==0.10.0
