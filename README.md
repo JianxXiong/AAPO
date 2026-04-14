@@ -1,82 +1,133 @@
-# AAPO: Enhancing the Reasoning Capabilities of LLMs with Advantage Momentum
+# AAPO: Enhancing the Reasoning Capabilities of LLMs with Advantage Margin
 
-Paper link: https://arxiv.org/abs/2505.14264v2 \
-Authors: Jian Xiong, Jingbo Zhou, Jingyong Ye, Qiang Huang, Dejing Dou
+**Advantage-Augmented Policy Optimization (AAPO)** — RL training algorithm that optimizes cross-entropy loss using advantages refined by a margin-based estimation scheme, reducing inefficiencies from group relative advantage estimation.
+
+---
+
+## Paper
+
+| | |
+| --- | --- |
+| **Title** | AAPO: Enhancing the Reasoning Capabilities of LLMs with Advantage Margin |
+| **Venue** | ACL 2026 |
+| **arXiv** | [2505.14264v2](https://arxiv.org/abs/2505.14264v2) |
+| **Authors** | $\text{Jian Xiong}$, $\text{Jingbo Zhou}^{\dagger}$, $\text{Jingyong Ye}$, $\text{Qiang Huang}$, $\text{Dejing Dou}^{\dagger}$ |
+
+---
 
 ## Introduction
-In this paper, we propose Advantage-Augmented Policy Optimization (AAPO), a novel RL algorithm
-that optimizes the cross-entropy (CE) loss using advantages enhanced through a momentum-based estimation scheme. AAPO effectively mitigates the
-inefficiencies associated with group relative advantage estimation. Experimental
-results on multiple mathematical reasoning benchmarks and model series demonstrate the superior
-performance of AAPO.
 
-Here are the main experimental results in our paper. More results about ablation study can be found in our paper.
-![](images/1.png)
+We propose **AAPO**, a novel RL algorithm for enhancing LLMs' reasoning capabilities. Experiments across multiple benchmarks and model families show consistent gains over strong baselines.
 
-![](images/2.png)
+### Main results
 
+Benchmark performance and statistical analysis of the zero advantage proportion during training:
 
-## Environment setup
-## Training environment
+![Main benchmark results](images/1.png)
+
+![Zero-advantage proportion during training](images/2.png)
+
+For training stability, convergence, ablations, OOD behavior, and training dynamics, please see the full paper.
+
+---
+
+## Repository layout
+
+| Directory | Typical use |
+| --- | --- |
+| [`open-rs/`](open-rs) | Train **DeepSeek-R1-Distill-Qwen-1.5B** |
+| [`open-r1/`](open-r1) | Train **Qwen2.5-Math-7B**, **Llama** (with config tweaks below), evaluation scripts |
+
+Shared dependency list: [`requirements.txt`](requirements.txt).
+
+---
+
+## Quick start
+
+### 1. Environment
+
 ```bash
 conda create -n train python=3.11
 conda activate train
 pip install -r requirements.txt
 ```
 
-## Training
-Train DeepSeek-R1-Distill-Qwen-1.5B model
+### 2. Training
+
+**DeepSeek-R1-Distill-Qwen-1.5B**
+
 ```bash
 cd open-rs
 bash train.sh
 ```
 
-Train Qwen2.5-Math-7B model
-```bash
-cd open-r1
-bash train.sh
-```
-
-Train Llama series models
-
-Set max_completion_length=3072, max_prompt_length=1024 in train.sh, and set dataset_name to SimpleRL-Zoo-Data/simplelr_abel_level3to5 in config file and clear the system prompt.
+**Qwen2.5-Math-7B**
 
 ```bash
 cd open-r1
 bash train.sh
 ```
 
-## Evaluation
-### Evaluate Qwen series models
-evaluation on single benckmark
+**Llama series**
+
+In `train.sh`, set `max_completion_length=3072` and `max_prompt_length=1024`. In the config, set `dataset_name` to `SimpleRL-Zoo-Data/simplelr_abel_level3to5` and clear the system prompt. Then:
+
 ```bash
+cd open-r1
+bash train.sh
+```
+
+### 3. Evaluation
+
+**Qwen series** — run inside the same tree you used for training (`open-r1` for Qwen2.5-Math-7B / Llama configs, `open-rs` for DeepSeek-R1-Distill-Qwen-1.5B).
+
+Single benchmark:
+
+```bash
+cd open-r1   # or: cd open-rs
 bash single_eval.sh
 ```
 
-evaluation on all benchmarks
+All benchmarks:
+
 ```bash
+cd open-r1   # or: cd open-rs
 bash auto_eval.sh
 ```
 
-### Evaluate Llama series models
-You can refer to this repo [SimpleRL-Reason](https://github.com/hkust-nlp/simpleRL-reason).
+**Llama series**
 
-## Contact
-If you have any questions, please contact jianxiong_ AT outlook DOT com.
+Follow the evaluation setup in [SimpleRL-Reason](https://github.com/hkust-nlp/simpleRL-reason).
+
+---
+
 
 ## Citation
-If you get any thing useful from this work, please cite:
+
+If you find this work useful, please cite:
+
 ```bibtex
 @misc{xiong2025aapoenhancingreasoningcapabilities,
-      title={AAPO: Enhancing the Reasoning Capabilities of LLMs with Advantage Momentum}, 
+      title={AAPO: Enhancing the Reasoning Capabilities of LLMs with Advantage Momentum},
       author={Jian Xiong and Jingbo Zhou and Jingyong Ye and Qiang Huang and Dejing Dou},
       year={2025},
       eprint={2505.14264},
       archivePrefix={arXiv},
       primaryClass={cs.LG},
-      url={https://arxiv.org/abs/2505.14264}, 
+      url={https://arxiv.org/abs/2505.14264},
 }
 ```
 
-## Acknowledge
-We are grateful for the foundational code provided by [SimpleRL-Reason](https://github.com/hkust-nlp/simpleRL-reason), [open-rs](https://github.com/knoveleng/open-rs) and [GPG](https://github.com/AMAP-ML/GPG). Utilizing their resources implies agreement to their respective licenses. Our project benefits greatly from these contributions, and we acknowledge their significant impact on our work.
+---
+
+## Acknowledgments
+
+We thank the authors of [SimpleRL-Reason](https://github.com/hkust-nlp/simpleRL-reason), [open-rs](https://github.com/knoveleng/open-rs), and [GPG](https://github.com/AMAP-ML/GPG) for foundational code. Use of their resources is subject to their respective licenses.
+
+
+---
+
+
+## Contact
+
+If you have any questions, please contact: jianxiong_ AT outlook DOT com.
