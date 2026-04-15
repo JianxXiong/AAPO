@@ -10,7 +10,7 @@
 | --- | --- |
 | **Title** | AAPO: Enhancing the Reasoning Capabilities of LLMs with Advantage Margin |
 | **Venue** | ACL 2026 Main Conference|
-| **ArXiv** | [2505.14264v2](https://arxiv.org/abs/2505.14264v2) |
+| **ArXiv** | [2505.14264](https://arxiv.org/abs/2505.14264) |
 | **Authors** | $\text{Jian Xiong}$, $\text{Jingbo Zhou}^{\dagger}$, $\text{Jingyong Ye}$, $\text{Qiang Huang}$, $\text{Dejing Dou}^{\dagger}$ |
 
 ---
