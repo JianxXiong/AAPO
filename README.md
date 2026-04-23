@@ -12,6 +12,7 @@
 | **Venue** | ACL 2026 Main Conference|
 | **ArXiv** | [2505.14264](https://arxiv.org/abs/2505.14264) |
 | **Authors** | $\text{Jian Xiong}$, $\text{Jingbo Zhou}^{\dagger}$, $\text{Jingyong Ye}$, $\text{Qiang Huang}$, $\text{Dejing Dou}^{\dagger}$ |
+| **Models** | [Huggingface](https://huggingface.co/collections/jianxxiong/aapo) |
 
 ---
 
