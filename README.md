@@ -110,7 +110,7 @@ If you find this work useful, please cite:
 ```bibtex
 @inproceedings{
 xiong2026aapoenhancingreasoningcapabilities,
-title={{AAPO}: Enhancing the Reasoning Capabilities of {LLM}s with Advantage Margin},
+title={AAPO: Enhancing the Reasoning Capabilities of LLMs with Advantage Margin},
 author={Xiong, Jian and Zhou, Jingbo and Ye, Jingyong and Huang, Qiang and Dou, Dejing},
 booktitle={The 64th Annual Meeting of the Association for Computational Linguistics},
 year={2026}
