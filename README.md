@@ -108,14 +108,12 @@ Follow the evaluation setup in [SimpleRL-Reason](https://github.com/hkust-nlp/si
 If you find this work useful, please cite:
 
 ```bibtex
-@misc{xiong2026aapoenhancingreasoningcapabilities,
-      title={AAPO: Enhancing the Reasoning Capabilities of LLMs with Advantage Margin}, 
-      author={Jian Xiong and Jingbo Zhou and Jingyong Ye and Qiang Huang and Dejing Dou},
-      year={2026},
-      eprint={2505.14264},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG},
-      url={https://arxiv.org/abs/2505.14264}, 
+@inproceedings{
+xiong2026aapoenhancingreasoningcapabilities,
+title={{AAPO}: Enhancing the Reasoning Capabilities of {LLM}s with Advantage Margin},
+author={Xiong, Jian and Zhou, Jingbo and Ye, Jingyong and Huang, Qiang and Dou, Dejing},
+booktitle={The 64th Annual Meeting of the Association for Computational Linguistics},
+year={2026}
 }
 ```
 
